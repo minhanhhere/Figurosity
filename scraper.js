@@ -59,7 +59,7 @@ function run(db) {
 }
 
 function fetchPose(db) {
-    for (let i = 1; i <= 2; i++) {
+    for (let i = 1; i <= 147; i++) {
         axios.post('https://api.figurosity.com/public/v1/poses', {"page": i,"models":[],"cameras":[],"gender":[],"style":[],"action":[],"props":[]})
             .then(response => {
                 return fetchFromApi(db, response.data.poses.data);
