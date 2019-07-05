@@ -82,7 +82,7 @@ function convertAndSavePose(db, data) {
 
     console.log(`Save poses id=${data.id}`);
 
-    var statement = db.prepare("INSERT INTO data VALUES (?,?,?)");
+    var statement = db.prepare("INSERT INTO pose VALUES (?,?,?)");
 	statement.run(pose.id, pose.uuid, pose.render_count);
 	statement.finalize();
 
